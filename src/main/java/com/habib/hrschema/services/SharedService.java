@@ -7,7 +7,7 @@ import org.dozer.DozerBeanMapper;
 import org.springframework.stereotype.Service;
 
 @Service
-public class SharedService {
+public class SharedService implements ISharedService {
 
 	public DozerBeanMapper getDozerInstance() {
 		synchronized (this) {

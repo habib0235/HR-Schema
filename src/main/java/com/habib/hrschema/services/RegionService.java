@@ -10,13 +10,13 @@ import com.habib.hrschema.entities.Region;
 import com.habib.hrschema.repositories.RegionRepository;
 
 @Service
-public class RegionService {
+public class RegionService implements IRegionService{
 
 	@Autowired
 	private RegionRepository regionRepository;
 
 	@Autowired
-	private SharedService sharedService;
+	private ISharedService sharedService;
 
 	public RegionDTO getRegion(Long id) {
 		Region entity = regionRepository.findById(id).orElse(null);

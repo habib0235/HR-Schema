@@ -14,16 +14,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.habib.hrschema.dto.RegionDTO;
-import com.habib.hrschema.services.RegionService;
-
-
+import com.habib.hrschema.services.IRegionService;
 
 @RestController
 @RequestMapping(path = "/regions")
 public class RegionController {
 
 	@Autowired
-	private RegionService service;
+	private IRegionService service;
 
 	@GetMapping(path = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
